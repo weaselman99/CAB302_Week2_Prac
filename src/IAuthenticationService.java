@@ -21,6 +21,11 @@ public class AuthenticationService implements IAuthenticationService {
     }
     // TODO Now: Implement the logIn method to return the user if the username and password match, and null otherwise
     public User logIn(String username, String password) {
-        return new User(username, password);
+        for (User user : this.users) {
+            if ((match.getUsername()) == password && (match.getPassword() == password) {
+                return match;
+            }
+        }
+        return null;
     }
 }
