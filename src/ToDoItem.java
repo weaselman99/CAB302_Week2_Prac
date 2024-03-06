@@ -7,7 +7,7 @@ public class ToDoItem {
     // Add getters and setters for each field
     public ToDoItem(String description) {
         this.description = description;
-        this.isDone = 0;
+        this.isDone = false;
     }
 
     public String getDescription() {

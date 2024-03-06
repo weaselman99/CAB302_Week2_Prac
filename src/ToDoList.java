@@ -1,3 +1,6 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+
 public class ToDoList {
     private User user;
     private boolean isRunning;
@@ -72,7 +75,7 @@ public class ToDoList {
     public void onShowAllItems() {
         for (int i = 0; i < user.getToDoItems().size(); i++) {
             ToDoItem item = user.getToDoItems().get(i);
-            if (item.isDone()) {
+            if (item.getIsDone()) {
                 System.out.println(i + ". [X] " + item.getDescription());
             } else {
                 System.out.println(i + ". [ ] " + item.getDescription());
@@ -124,7 +127,7 @@ public class ToDoList {
         Scanner scanner = new Scanner(System.in);
         int itemNumber = scanner.nextInt();
         // TODO Now: Remove the item at the specified index from the user's to-do items list
-        removeItem(itemNumber);
+        user.removeItem(itemNumber);
     }
 
     /**

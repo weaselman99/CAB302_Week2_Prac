@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class User {
     private String username;
     private String password;
@@ -48,7 +50,7 @@ public class User {
     }
 
     public void updateIsDone(int idx, boolean val) {
-        item = this.toDoItems.get(idx);
+        ToDoItem item = this.toDoItems.get(idx);
         item.setIsDone(val);
     }
 
