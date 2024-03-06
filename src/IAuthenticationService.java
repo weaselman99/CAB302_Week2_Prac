@@ -13,10 +13,10 @@ public class AuthenticationService implements IAuthenticationService {
 
     // TODO Now: Implement the signUp method to add a new user to the list if the username is not taken and return the user; returns null otherwise
     public User signUp(String username, String password) {
-        throw new UnsupportedOperationException("Feature incomplete. Contact assistance.");
+        return new User(username, password);
     }
     // TODO Now: Implement the logIn method to return the user if the username and password match, and null otherwise
     public User logIn(String username, String password) {
-        throw new UnsupportedOperationException("Feature incomplete. Contact assistance.");
+        return new User(username, password);
     }
 }
