@@ -1,10 +1,12 @@
 public class User {
     private String username;
     private String password;
+    private ArrayList<ToDoItem> toDoItems;
 
     public User(String username, String password) {
         this.username = username;
         this.password = password;
+        this.toDoItems = new ArrayList<>();
     }
 
     /**
@@ -35,5 +37,26 @@ public class User {
      */
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public void addItem(String description) {
+        this.toDoItems.add(new ToDoItem(description));
+    }
+
+    public void removeItem(int idx) {
+        this.toDoItems.remove(idx);
+    }
+
+    public void updateIsDone(int idx, boolean val) {
+        item = this.toDoItems.get(idx);
+        item.setIsDone(val);
+    }
+
+    /**
+     * Gets the to-do items of the user.
+     * @return A reference to the list of to-do items, which can be modified from outside the class.
+     */
+    public ArrayList<ToDoItem> getToDoItems() {
+        return toDoItems;
     }
 }
